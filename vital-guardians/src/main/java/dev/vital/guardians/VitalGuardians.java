@@ -205,7 +205,7 @@ public class VitalGuardians extends Script
 								}
 								case LAW_GUARDIAN:
 								{
-									if (rc_level >= RunecraftAction.LAW_RUNE.getLevel())
+									if (Quests.isFinished(Quest.TROLL_STRONGHOLD) && rc_level >= RunecraftAction.LAW_RUNE.getLevel())
 									{
 										should_skip = false;
 										guardian.interact("Enter");
@@ -250,7 +250,7 @@ public class VitalGuardians extends Script
 								}
 								case DEATH_GUARDIAN:
 								{
-									if (rc_level >= RunecraftAction.DEATH_RUNE.getLevel() && Quests.getState(Quest.MOURNINGS_END_PART_II) == QuestState.FINISHED)
+									if (Quests.isFinished(Quest.MOURNINGS_END_PART_II) && rc_level >= RunecraftAction.DEATH_RUNE.getLevel())
 									{
 										should_skip = false;
 										guardian.interact("Enter");
@@ -277,7 +277,7 @@ public class VitalGuardians extends Script
 								}
 								case COSMIC_GUARDIAN:
 								{
-									if (rc_level >= RunecraftAction.COSMIC_RUNE.getLevel())
+									if (Quests.isFinished(Quest.LOST_CITY) && rc_level >= RunecraftAction.COSMIC_RUNE.getLevel())
 									{
 										should_skip = false;
 										guardian.interact("Enter");
